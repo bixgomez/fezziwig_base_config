@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Code for the fezziwig_base_config feature.
+ */
+
+include_once 'fezziwig_base_config.features.inc';
+
+/*
+ * Implements hook_html_head_alter
+ */
+function zen_susy_html_head_alter(&$head_elements) {
+  drupal_add_js('https://use.typekit.net/zps8ubl.js', 'external');
+  drupal_add_js('try{Typekit.load({ async: true });}catch(e){}', array('type' => 'inline'));
+}
